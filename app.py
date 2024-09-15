@@ -19,6 +19,7 @@ def index():
 
 def calculate_retirement(birthdate, gender):
     # 基础退休年龄（男性60岁，女性55岁）
+    # 目标退休年龄（男性63岁，女性58岁） 
     base_retirement_age = 60 if gender == 'male' else 55
     # 目标退休年龄（男性63岁，女性58岁） 
     target_retirement_age = 63 if gender == 'male' else 58
@@ -51,4 +52,5 @@ def calculate_retirement(birthdate, gender):
 
 
 if __name__ == '__main__':
+    # 启动应用
     app.run(debug=True)
