@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Retirement Age Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 16px;
+        }
+        body {
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>退休年龄计算器</h1>
+    <p>实际退休月份: {{ actural_retirement_month }}</p>
+    <p>基础退休月份: {{ base_retirement_month }}</p>
+    <p>延迟月份: {{ months_until_target }} </p>
+  </body>
+</html>
