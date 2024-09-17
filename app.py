@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
+import math
 
 app = Flask(__name__)
 
@@ -38,7 +39,7 @@ def calculate_retirement(birthdate, gender):
     months_difference = int(months_difference)
 
     # 根据规则延长的月份数
-    months_until_target = months_difference//4
+    months_until_target =math.ceil((months_difference+4)//4) 
 
     # 如果大于36，则设置为36
     months_until_target = min(months_until_target, 36)
